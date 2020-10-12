@@ -8,6 +8,7 @@ namespace gas{
     using char_t = char;
     using char_p = char_t*;
     using char_cp = const char_t*;
+    
     using u8 = uint8_t;    
     using u8 = uint8_t;    
     using u8 = uint8_t;    
