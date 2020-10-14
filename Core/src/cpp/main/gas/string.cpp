@@ -3,6 +3,7 @@
 #include <cstring>
 
 namespace gas{
+
     Utf8String::Utf8String(char_cp source):
         mBuffer(nullptr), mLen(0)
     {
@@ -23,6 +24,18 @@ namespace gas{
 
     Utf8String::operator char_p()const{
         return mBuffer;
+    }
+
+    Utf8String& Utf8String::operator=(const Utf8String& source){
+        if(this != &source){
+            this->mLen = source.mLen;
+            strncpy(this->mBuffer, source.mBuffer, this->mLen);
+        }
+        return *this;
+    }
+
+    Utf8String Utf8String::operator+(const Utf8String& right){
+        return *this;
     }
 
 }
