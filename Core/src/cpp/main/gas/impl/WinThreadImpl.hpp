@@ -1,5 +1,5 @@
-#ifndef GAS_WIN_THREAD_HPP
-#define GAS_WIN_THREAD_HPP
+#ifndef GAS_IMPL_WIN_WIN_THREAD_IMPL_HPP_13122020_175112
+#define GAS_IMPL_WIN_WIN_THREAD_IMPL_HPP_13122020_175112
 
 #include "..\Task.hpp"
 #include "ThreadImpl.hpp"
