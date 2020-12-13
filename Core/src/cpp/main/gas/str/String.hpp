@@ -7,15 +7,15 @@
 namespace gas{
     namespace str{
         class String: public gas::Object{
-        private:
+        protected:
             char_p mBuffer;
             int    mLen;
         public:
             String(char_cp source);
-            // String(const String& source);
+            String(const String& source);
             ~String();        
             operator char_p()const;
-            // String& operator=(const String& source);
+            String& operator=(const String& source);
             // String operator+(const String& right);
             // Utf8String oeprator+=(const Utf8String& str);
             // const Utf8String& operator=(const Utf8String& source)const;
