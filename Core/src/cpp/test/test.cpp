@@ -1,6 +1,7 @@
 #include <gas/str/String.hpp>
 #include <gas/Ptr.hpp>
 #include <gas/Thread.hpp>
+#include <gas/Task.hpp>
 #include <iostream>
 
 struct Mock{
@@ -13,12 +14,12 @@ struct Mock{
     }
 };
 
-class MyThread: public gas::Thread{
+class MyTask: public gas::Task{
 public:
-    void run() override;
+    void execute() override;
 };
 
-void MyThread::run(){
+void MyTask::execute(){
     int i = 0; 
     int iterationsCount = 100;
     std::cout << "Thread started" << std::endl;
@@ -39,7 +40,7 @@ void testPtr(){
 }
 
 void testThread(){
-    MyThread thread;
+    gas::Thread thread(new MyTask());
     thread.start();
     thread.join();
 }

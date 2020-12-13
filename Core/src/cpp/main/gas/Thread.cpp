@@ -1,45 +1,36 @@
 #include "Thread.hpp"
 
 #include "impl\ThreadImpl.hpp"
+#include "impl\WinThreadImpl.hpp"
 
 namespace gas{
-
-    static DWORD WINAPI proc(LPVOID ptr){
-        ((Thread*)ptr)->run();
-        return 0;
-    }
-
     Thread::Thread(): Thread(new EmptyTask()) {}
 
-    Thread::Thread(Task* task): Object(),
-        mHandle(INVALID_HANDLE_VALUE), mId(0), mTask(task){
-            if(mTask == nullptr){
-                mTask = new EmptyTask();
-            }
+    Thread::Thread(Task* task): Object(), 
+            mTask(task), 
+            mImpl(nullptr)
+    {
+        if(mTask == nullptr){
+            mTask = new EmptyTask();
         }
+        // @todo: adding platform specific defines here
+        mImpl = new impl::win::WinThreadImpl(mTask);
+    }
 
     Thread::~Thread(){
-        if(mHandle != INVALID_HANDLE_VALUE){
-            CloseHandle(mHandle);
-            mId = 0;
-        }
+        delete mImpl;
         delete mTask;
     }
     
     void Thread::start(){
-        mHandle = CreateThread(NULL, 0, 
-            /*thread_func*/proc,
-            /*data*/this,
-            0, &mId);
+        mImpl->start();
     }   
 
     void Thread::join(){
-        WaitForSingleObject(mHandle, INFINITE);
+        mImpl->join();
     }       
 
     void Thread::run(){
-        // @todo: throw exception when this function 
-        // called from another thread object!
-        mTask->execute();
+        mImpl->run();
     }
 }

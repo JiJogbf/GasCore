@@ -13,9 +13,8 @@ namespace gas{
 
     class Thread: public Object{
     private:
-        HANDLE mHandle;
-        DWORD mId;
         Task* mTask;
+        impl::ThreadImpl* mImpl;
     public:
         Thread();
         Thread(Task* task);
