@@ -21,7 +21,7 @@ public:
 void MyThread::run(){
     int i = 0; 
     std::cout << "Thread started" << std::endl;
-    while(i < 100000){
+    while (i < 100000) {
         i++;
         std::cout << "i = " << i << std::endl;
     }
