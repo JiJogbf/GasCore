@@ -1,4 +1,4 @@
-#include <gas/string.hpp>
+#include <gas/str/String.hpp>
 #include <gas/Ptr.hpp>
 #include <gas/Thread.hpp>
 #include <iostream>
@@ -29,8 +29,8 @@ void MyThread::run(){
 }
 
 void testString(){
-    gas::Utf8String s = "hello world";
-    std::cout << s << std::endl;
+    // gas::Utf8String s = "hello world";
+    // std::cout << s << std::endl;
 }
 
 void testPtr(){

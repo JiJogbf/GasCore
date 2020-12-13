@@ -14,8 +14,6 @@ namespace gas{
     using u16 = uint16_t;    
     using u32 = uint32_t;    
     using u64 = uint64_t;
-
-    using String = std::string;
 }
 
 #endif

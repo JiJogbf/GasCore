@@ -1,12 +1,14 @@
 #include "Object.hpp"
 
+#include "str\String.hpp"
+
 namespace gas{
     Object::Object(){}
 
     Object::~Object(){}
 
-    String* Object::toString(){
-        return "";
+    str::String* Object::toString(){
+        return new gas::str::String("");
     }
 
     Object* Object::clone(){
