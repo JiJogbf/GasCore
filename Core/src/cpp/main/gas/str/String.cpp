@@ -36,7 +36,7 @@ String& String::operator=(const String& source){
     return *this;
 }
 
-String::operator char_p()const{
+String::operator char_p() const{
     // @todo: handle nullptr case maybe done 
     // via virtual wrapper
     return mBuffer;

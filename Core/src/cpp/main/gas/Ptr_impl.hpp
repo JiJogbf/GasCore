@@ -3,7 +3,7 @@
 
 namespace gas{
     template<class T>
-    Ptr<T>::Ptr(T* ptr): mPtr(ptr){}
+    Ptr<T>::Ptr(T* ptr): Object(), mPtr(ptr){}
 
     template<class T>
     Ptr<T>::~Ptr(){

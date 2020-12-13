@@ -9,7 +9,7 @@ namespace gas{
         return 0;
     }
 
-    Thread::Thread(): 
+    Thread::Thread(): Object(),
         mHandle(INVALID_HANDLE_VALUE), mId(0)
     {}
 

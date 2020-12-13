@@ -1,6 +1,8 @@
 #ifndef GAS_THREAD_HPP
 #define GAS_THREAD_HPP
 
+#include "Object.hpp"
+
 #include <windows.h>
 
 namespace gas{
@@ -8,7 +10,7 @@ namespace gas{
         class ThreadImpl;
     }
 
-    class Thread{
+    class Thread: public Object{
     private:
         // impl::ThreadImpl* mImpl;
         // void runInternal();
