@@ -3,14 +3,14 @@
 
 namespace gas{
     template<class T>
-    Ptr<T>::Ptr(T* ptr): mPtr(ptr){
-
-    }
+    Ptr<T>::Ptr(T* ptr): mPtr(ptr){}
 
     template<class T>
     Ptr<T>::~Ptr(){
-        if(mPtr)
+        if(mPtr){
             delete mPtr;
+            mPtr = nullptr;
+        }    
     }
 }
 
