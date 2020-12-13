@@ -20,8 +20,9 @@ public:
 
 void MyThread::run(){
     int i = 0; 
+    int iterationsCount = 100;
     std::cout << "Thread started" << std::endl;
-    while (i < 100000) {
+    while (i < iterationsCount) {
         i++;
         std::cout << "i = " << i << std::endl;
     }
@@ -29,8 +30,8 @@ void MyThread::run(){
 }
 
 void testString(){
-    // gas::Utf8String s = "hello world";
-    // std::cout << s << std::endl;
+    gas::str::String s = "hello world";
+    std::cout << s << std::endl;
 }
 
 void testPtr(){

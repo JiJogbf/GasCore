@@ -3,6 +3,7 @@ cmake_minimum_required(VERSION 3.16)
 set(CXX_STANDARD 17)
 
 aux_source_directory(src/cpp/main/gas CoreMainSrc)
+aux_source_directory(src/cpp/main/gas/str CoreMainSrc)
 aux_source_directory(src/cpp/test/gas CoreTestLibSrc)
 
 add_library(Core ${CoreMainSrc})
