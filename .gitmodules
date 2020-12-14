@@ -1,0 +1,6 @@
+[submodule "GasCore-Core"]
+	path = GasCore-Core
+	url = https://github.com/JiJogbf/GasCore-Core
+[submodule "GasCore-UI"]
+	path = GasCore-UI
+	url = https://github.com/JiJogbf/GasCore-UI

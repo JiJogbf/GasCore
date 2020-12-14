@@ -2,5 +2,5 @@ cmake_minimum_required(VERSION 3.16)
 
 project(GasCore)
 
-add_subdirectory(Core)
-add_subdirectory(UI)
+add_subdirectory(GasCore-Core)
+add_subdirectory(GasCore-UI)
