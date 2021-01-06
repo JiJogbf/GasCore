@@ -4,3 +4,4 @@ project(GasCore)
 
 add_subdirectory(GasCore-Core)
 add_subdirectory(GasCore-UI)
+add_subdirectory(GasCore-Net)
