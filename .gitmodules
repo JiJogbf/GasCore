@@ -5,3 +5,6 @@
 	path = GasCore-UI
 	url = https://github.com/JiJogbf/GasCore-UI
 
+[submodule "GasCore-Net"]
+	path = GasCore-Net
+	url = https://github.com/JiJogbf/GasCore-Net
